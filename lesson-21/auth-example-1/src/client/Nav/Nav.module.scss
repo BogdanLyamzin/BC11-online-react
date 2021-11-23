@@ -1,0 +1,35 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.link {
+    width: 140px;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 15px;
+    color: red;
+    border: 1px solid red;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.active {
+    background-color: red;
+    color: #fff;
+}
+
+.logout {
+    background-color: red;
+    padding: 10px 15px;
+    color: #fff;
+    border: 1px solid red;
+    cursor: pointer;
+}
