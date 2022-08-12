@@ -4,12 +4,12 @@ import api from "../../shared/services/books";
 // "books/add/pending"
 // "books/add/fulfilled"
 // "books/add/rejected"
-export const addBook = createAsyncThunk("books/add", async credentials => {
+export const addBook = createAsyncThunk("books/add", async (credentials, {rejectWithValue}) => {
     try {
         const {data} = await api.fetchAddBook(credentials);
         return data;
     } catch (error) {
-        return error;
+        return rejectWithValue(error);
     }
 })
 
@@ -31,13 +31,4 @@ export default {
 //     return func;
 // }
 
-export const removeBook = id => {
-    const func = async dispatch => {
-        try {
-            
-        } catch (error) {
-            
-        }
-    }
-}
 
